@@ -2,7 +2,6 @@ package testsandasserts
 
 //import org.scalatest.Assertions._
 import org.scalatest.DiagrammedAssertions._
-import org.scalactic._
 
 class Testings {
 	
