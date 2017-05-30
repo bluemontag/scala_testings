@@ -2,7 +2,6 @@ package testsandasserts
 
 import org.scalatest.Matchers
 import org.scalatest.FlatSpec
-//import org.scalatest.DiagrammedAssertions._
 
 class MyTests extends FlatSpec with Matchers {
   
@@ -15,8 +14,8 @@ class MyTests extends FlatSpec with Matchers {
 	}
 	
 	"operator contains" should "return true if the element is in the list" in {
-		var x = 1
+		var x = 4
   	
-  	assert(List(1,2,3).contains(x))
+  	assert(List(1,2,3).contains(x) && x < 4)
 	}
 }

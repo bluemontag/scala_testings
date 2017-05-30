@@ -1,5 +1,6 @@
 import collection.mutable.Stack
-import org.scalatest._
+import org.scalatest.Matchers
+import org.scalatest.FlatSpec
 
 class ExampleSpec extends FlatSpec with Matchers {
 

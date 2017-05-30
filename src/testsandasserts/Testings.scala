@@ -15,7 +15,7 @@ object Testings {
   
   def main(args:Array[String]):Unit = {
   	method(4)//anda bien
-//  	method(1)//da AssertionError
+//    method(1)//da AssertionError
 
   	var x = 1
   	
