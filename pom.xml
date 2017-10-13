@@ -5,7 +5,7 @@
 	<artifactId>Scala_testings</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Scala Testings</name>
-	<description>From reading the book of Scala</description>
+	<description>Code Testing from reading the book "Programming in Scala, Third Edition" By: Martin Odersky,Lex Spoon,Bill Venners</description>
 	<build>
 		<sourceDirectory>src</sourceDirectory>
 		<resources>
