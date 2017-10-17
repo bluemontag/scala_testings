@@ -1,13 +1,13 @@
 package testsandasserts
 
 //import org.scalatest.Assertions._
-import org.scalatest.DiagrammedAssertions._
+//import org.scalatest.DiagrammedAssertions._
 
 class Testings {
 	
 }
 
-object Testings {
+/*object Testings {
   def method(i:Int):Int = {
   	
   	i ensuring (i>=2, i)
@@ -22,4 +22,4 @@ object Testings {
   	assert(List(1,2,3).contains(x) && x > 1)
   	
   }
-}
+}*/

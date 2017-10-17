@@ -1,8 +1,6 @@
-import collection.mutable.Stack
-import org.scalatest.Matchers
-import org.scalatest.FlatSpec
+package testsandasserts
 
-class ExampleSpec extends FlatSpec with Matchers {
+class ExampleSpec /*extends FlatSpec with Matchers {
 
   "A Stack" should "pop values in last-in-first-out order" in {
     val stack = new Stack[Int]
@@ -18,4 +16,4 @@ class ExampleSpec extends FlatSpec with Matchers {
       emptyStack.pop()
     } 
   }
-}
+}*/

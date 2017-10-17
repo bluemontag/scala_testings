@@ -1,8 +1,8 @@
 package testsandasserts
 
-import org.scalatest._
+//import org.scalatest._
 
-class TVSetSpec extends FeatureSpec with GivenWhenThen {
+class TVSetSpec /*extends FeatureSpec with GivenWhenThen {
 
   feature("TV power button") {
     scenario("User presses power button when TV is off") {
@@ -12,4 +12,4 @@ class TVSetSpec extends FeatureSpec with GivenWhenThen {
       pending
     }
   }
-}
+}*/
