@@ -21,7 +21,7 @@ import org.scalatest.time.Seconds
 import org.scalatest.exceptions.TestFailedException
 import org.scalatest.concurrent.Eventually._
 
-class ArasSeleniumTest extends FlatSpec with Matchers with WebBrowser {
+class SeleniumTest extends FlatSpec with Matchers with WebBrowser {
 
   System setProperty ("webdriver.gecko.driver", "C:\\geckodriver\\geckodriver.exe")
 
