@@ -11,6 +11,17 @@ import scala.collection.JavaConversions._
 import org.scalatest.selenium.Firefox
 import org.openqa.selenium.firefox._
 
+import org.scalatest.FunSpec
+import java.util.concurrent.TimeUnit
+import org.scalatest.time.SpanSugar
+import org.scalatest.ParallelTestExecution
+import org.openqa.selenium.WebDriver
+import org.scalatest.time.Span
+import org.scalatest.time.Seconds
+import org.scalatest.exceptions.TestFailedException
+import org.scalatest.concurrent.Eventually._
+
+
 class ArasSeleniumTest extends FlatSpec with Matchers with WebBrowser {
 
   System setProperty ("webdriver.gecko.driver", "C:\\geckodriver\\geckodriver.exe")
@@ -19,13 +30,19 @@ class ArasSeleniumTest extends FlatSpec with Matchers with WebBrowser {
 
   "The Google page" should "have the correct title" in {
     go to ("http://www.google.com.ar")
-//    pageTitle should be("Google")
+    //    pageTitle should be("Google")
 
-    click on name("q") // to lookup by name "q" 
-    textField("q").value = "Emilia"
+    click on name("q") // to lookup by name "q"
+    textField("q").value = "María Emilia Lucidi"
     submit()
     // Google's search is rendered dynamically with JavaScript.
-//    pageTitle should be("Cheese! - Google Search")
-//    webDriver quit
+    //    pageTitle should be("Cheese! - Google Search")
+
+    eventually(timeout(Span(10, Seconds))) {
+      pageTitle should be("María Emilia Lucidi - Buscar con Google")
+    }
+
+    Thread.sleep(3000);
+    webDriver quit
   }
 }
