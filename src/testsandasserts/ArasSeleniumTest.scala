@@ -14,13 +14,18 @@ import org.openqa.selenium.firefox._
 class ArasSeleniumTest extends FlatSpec with Matchers with WebBrowser {
 
   System setProperty ("webdriver.gecko.driver", "C:\\geckodriver\\geckodriver.exe")
-  
+
   implicit val webDriver: WebDriver = new FirefoxDriver
-  
+
   "The Google page" should "have the correct title" in {
     go to ("http://www.google.com.ar")
-    pageTitle should be ("Google")
-    
-    webDriver quit
+//    pageTitle should be("Google")
+
+    click on name("q") // to lookup by name "q" 
+    textField("q").value = "Emilia"
+    submit()
+    // Google's search is rendered dynamically with JavaScript.
+//    pageTitle should be("Cheese! - Google Search")
+//    webDriver quit
   }
 }
