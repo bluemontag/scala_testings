@@ -21,7 +21,6 @@ import org.scalatest.time.Seconds
 import org.scalatest.exceptions.TestFailedException
 import org.scalatest.concurrent.Eventually._
 
-
 class ArasSeleniumTest extends FlatSpec with Matchers with WebBrowser {
 
   System setProperty ("webdriver.gecko.driver", "C:\\geckodriver\\geckodriver.exe")
@@ -34,15 +33,15 @@ class ArasSeleniumTest extends FlatSpec with Matchers with WebBrowser {
     click on name("q") // to lookup by name "q"
     textField("q").value = "María Emilia Lucidi"
     submit()
-    
+
     // Google's search is rendered dynamically with a JavaScript AJAX call.
 
     eventually(timeout(Span(10, Seconds))) {
       pageTitle should be("María Emilia Lucidi - Buscar con Google")
     }
 
-    Thread.sleep(3000)//espero 3 segundos
-    
+    Thread.sleep(3000) //espero 3 segundos
+
     quit
   }
 }
