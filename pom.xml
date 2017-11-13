@@ -6,13 +6,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Scala Testings</name>
 	<description>Code Testing from reading the book "Programming in Scala, Third Edition" By: Martin Odersky,Lex Spoon,Bill Venners</description>
-	<repositories>
-		<repository>
-			<id>artima</id>
-			<name>Artima Maven Repository</name>
-			<url>http://repo.artima.com/releases</url>
-		</repository>
-	</repositories>
+	
 	<build>
 		<sourceDirectory>src</sourceDirectory>
 		<resources>
