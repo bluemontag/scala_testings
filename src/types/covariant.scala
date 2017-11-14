@@ -1,6 +1,6 @@
 package types
 
-import types.Wild;
+//import types.Wild;
 
 /*object covariant {
   def main(args : String[String]) : Unit {
